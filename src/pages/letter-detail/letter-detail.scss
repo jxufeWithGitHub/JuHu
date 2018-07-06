@@ -1,0 +1,23 @@
+page-letter-detail {
+  .portrait {
+    border-radius: 50%;
+    vertical-align: middle;
+  }
+  ion-col p {
+    margin: 0;
+    display: inline-block;
+    padding: 0 5px;
+    background-color: blanchedalmond;
+  }
+  .hiddenImg {
+    visibility: hidden;
+  }
+  .leftContent {
+    text-align: left;
+    line-height: 40px;
+  }
+  .rightContent {
+    text-align: right;
+    line-height: 40px;
+  }
+}

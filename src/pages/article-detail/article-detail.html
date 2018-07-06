@@ -1,0 +1,82 @@
+<!--
+  Generated template for the ArticleDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-toolbar>
+    <ion-buttons left>
+      <button ion-button (click)="dismiss()">
+        <span ion-text color="primary" showWhen="ios">Cancel</span>
+        <ion-icon style="font-size: 2rem" name="arrow-round-back" showWhen="android,windows"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+      {{title}}
+    </ion-title>
+  </ion-toolbar>
+
+
+</ion-header>
+
+
+<ion-content>
+  <ion-grid padding style="border-bottom: 1px solid #d3d3d3">
+    <ion-row>
+      <ion-col col-2>
+        <img width="40px" class="portrait" src="assets/imgs/portrait.png">
+      </ion-col>
+      <ion-col col-7 text-left>
+        <p>{{nickname}}</p>
+        <p>{{describe}}</p>
+      </ion-col>
+      <ion-col col-3 text-right>
+        <button id="unfollow" ion-button float-right small (click)="refreshFollow()">+ 关注</button>
+        <button id="follow" ion-button float-right small outline (click)="refreshFollow()">已关注</button>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div padding-left padding-right>
+    <header>
+      <h1>{{title}}</h1>
+    </header>
+    <div>一个月前</div>
+    <article #content></article>
+  </div>
+
+  <!-- <div style="border-top: 1px solid #d3d3d3">
+    
+  </div> -->
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-row>
+      <ion-col text-left>
+        <button ion-button color="light" outline small (click)="refreshFabulous()">
+          <ion-icon name="thumbs-up"> {{fabulous}}</ion-icon>
+        </button>
+      </ion-col>
+      <ion-col text-right>
+          <div float-right text-center (click)="openComment()">
+              <ion-icon name="text"></ion-icon>
+              <p>{{comments}}</p>
+          </div>
+        <div id="collections" float-right text-center (click)="refreshCollection()">
+            <ion-icon name="star"></ion-icon>
+            <p>{{collections}}</p>
+        </div>
+        <!-- <button ion-button float-right color="light" clear small (click)="refreshCollection()">
+          <ion-icon name="star"></ion-icon>
+          <p>收藏</p>
+        </button> -->
+        <!-- <button ion-button float-right color="light" clear small (click)="openComment()">
+          <ion-icon name="text"> 评论</ion-icon>
+        </button> -->
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>

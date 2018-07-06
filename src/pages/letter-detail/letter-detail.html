@@ -1,0 +1,61 @@
+<!--
+  Generated template for the LetterDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-toolbar>
+    <ion-buttons left>
+      <button ion-button (click)="dismiss()">
+        <span ion-text color="primary" showWhen="ios">Cancel</span>
+        <ion-icon style="font-size: 2rem" name="arrow-round-back" showWhen="android,windows"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+      {{toUser.nickName}}
+    </ion-title>
+
+    <!-- <ion-buttons right>
+        <button ion-button (click)="entranceEditArticle()">
+          <span ion-text>创建</span>
+        </button>
+      </ion-buttons> -->
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-grid>
+      <ion-row *ngFor="let item of letterList">
+        <ion-col [class]="item.leftImg" col-2>
+          <img width="40px" class="portrait" src="assets/imgs/portrait.png">
+        </ion-col>
+        <ion-col [class]="item.content" class="content" col-8>
+          <p>{{item.letter.content}}</p>
+        </ion-col>
+        <ion-col [class]="item.rightImg" col-2>
+          <img width="40px" class="portrait" src="assets/imgs/portrait.png">
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+</ion-content>
+
+<ion-footer style="background:#fff">
+  <ion-toolbar no-padding>
+    <ion-row no-padding>
+      <ion-col col-10 text-left>
+        <ion-input #content type="text" placeholder="请输入需要发送的信息" style="border-bottom: 1px solid #909090"></ion-input>
+      </ion-col>
+      <ion-col col-2 text-bottom>
+        <button ion-button color="light" clear (click)="send(content.value)">
+          <ion-icon name="send"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>

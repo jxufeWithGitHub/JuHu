@@ -1,0 +1,19 @@
+page-home {
+  .portrait {
+    border-radius: 50%;
+    vertical-align: middle;
+  }
+  .user-info-article span,
+  .user-info-article h2,
+  .user-info-article ion-note {
+    padding: 5px 0px;
+  }
+  .user-info-article p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+  }
+}

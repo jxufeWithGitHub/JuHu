@@ -1,0 +1,52 @@
+<!--
+  Generated template for the NotificationsSettingPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-toolbar>
+    <ion-buttons left>
+      <button ion-button (click)="dismiss()">
+        <span ion-text color="primary" showWhen="ios">Cancel</span>
+        <ion-icon style="font-size: 2rem" name="arrow-round-back" showWhen="android,windows"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+      全局消息设置
+    </ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item-divider>有人喜欢我的内容</ion-item-divider>
+    <ion-item>
+      <ion-toggle checked="false"></ion-toggle>
+      <ion-label>赞了我的文章</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-toggle checked="false"></ion-toggle>
+      <ion-label>评论了我的文章</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-toggle checked="false"></ion-toggle>
+      <ion-label>收藏了我的文章</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item-divider>有人关注我的内容</ion-item-divider>
+    <ion-item>
+      <ion-toggle checked="false"></ion-toggle>
+      <ion-label>关注了我</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-toggle checked="false"></ion-toggle>
+      <ion-label>关注了我发起的话题</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

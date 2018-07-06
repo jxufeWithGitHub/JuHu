@@ -1,0 +1,40 @@
+page-notifications {
+  .model1,
+  .model2 {
+    margin-top: 10px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  }
+  .model1 * {
+    margin: 0;
+  }
+  .model1 img {
+    margin: 5px;
+  }
+  .model1 h2,
+  .model1 p {
+    margin: 5px 0;
+  }
+  .model2 {
+    height: 100%;
+  }
+  .model2 ion-col h2 {
+    margin: 0px;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .noNotifications ion-icon {
+    display: block;
+    color: #F0F0F0;
+    margin-top: 50px;
+    font-size: 10rem;
+    text-align: center;
+  }
+  .noNotifications h2 {
+    margin: 0;
+    text-align: center;
+    color: #909090;
+  }
+}

@@ -1,0 +1,29 @@
+page-collection {
+    .portrait {
+      border-radius: 50%;
+      vertical-align: bottom;
+    }
+    .user-info-article span,
+    .user-info-article h2,
+    .user-info-article ion-note {
+      padding: 5px 0px;
+    }
+    
+    .user-info-article span{
+      font-size: 1.1rem;
+      color: #909090;
+    }
+
+
+    .user-info-article p {
+      font-size: 1.1rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      white-space: normal;
+    }
+    
+
+}

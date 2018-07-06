@@ -1,0 +1,68 @@
+<ion-header>
+
+  <ion-searchbar>
+  </ion-searchbar>
+
+  <ion-segment [(ngModel)]="home">
+    <ion-segment-button value="follow">
+      关注
+    </ion-segment-button>
+    <ion-segment-button value="recommend">
+      推荐
+    </ion-segment-button>
+    <ion-segment-button value="hot">
+      热榜
+    </ion-segment-button>
+  </ion-segment>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content>
+    </ion-refresher-content>
+  </ion-refresher>
+  <div [ngSwitch]="home">
+      <ion-list class="user-info-article" *ngSwitchCase="'follow'">
+        <ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+          <span>
+            <img width="16" class="portrait" src="assets/imgs/portrait.png"> {{item.nickname}}</span>
+          <h2>{{item.article.title}}</h2>
+          <p>
+            {{item.article.description}}
+          </p>
+          <ion-note style="font-size: 1rem">
+            {{item.article.createdAt}}
+          </ion-note>
+        </ion-item>
+      </ion-list>
+  
+      <ion-list class="user-info-article" *ngSwitchCase="'recommend'">
+        <ion-item *ngFor="let item of items">
+          <span>
+            <img width="16" class="portrait" src="assets/imgs/portrait.png"> {{item.nickname}}</span>
+          <h2>{{item.article.title}}</h2>
+          <p>
+            {{item.article.description}}
+          </p>
+          <ion-note style="font-size: 1rem">
+            {{item.article.createdAt}}
+          </ion-note>
+        </ion-item>
+      </ion-list>
+  
+      <ion-list class="user-info-article" *ngSwitchCase="'hot'">
+        <ion-item *ngFor="let item of items">
+          <span>
+            <img width="16" class="portrait" src="assets/imgs/portrait.png"> {{item.nickname}}</span>
+          <h2>{{item.article.title}}</h2>
+          <p>
+            {{item.article.description}}
+          </p>
+          <ion-note style="font-size: 1rem">
+            {{item.article.createdAt}}
+          </ion-note>
+        </ion-item>
+      </ion-list>
+    </div>
+</ion-content>
